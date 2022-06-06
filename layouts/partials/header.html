@@ -16,7 +16,7 @@
             </div>
             <div class="flex">
                 {{ range .Site.Menus.header }}
-                <a href="{{ .URL | relURL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+                <a href="{{ .URL | relURL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}{{ if isset .Params "rel" }} rel="{{ .Params.rel }}"{{ end}}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
                 {{ end }}
                 {{ if (default true .Site.Params.colorScheme.toggle) }}
                     <button id="dark-mode-button">
