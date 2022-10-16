@@ -65,9 +65,11 @@ menu:
   header:
     - name: Articles
       url: "/articles/"
+      params: {}
   footer:
     - name: RSS
       url: "/index.xml"
+      params: {}
 
 markup:
   highlight:
